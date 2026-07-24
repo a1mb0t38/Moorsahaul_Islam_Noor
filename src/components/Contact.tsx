@@ -51,7 +51,7 @@ export default function Contact() {
       className="py-24 bg-[#000000] border-b border-[#1a1a1a] bg-radial-dots relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <div className="mb-12">
           <div className="flex items-center gap-3">
@@ -67,7 +67,7 @@ export default function Contact() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          
+
           {/* Left Column: Direct Info */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -87,7 +87,7 @@ export default function Contact() {
 
             {/* Contact Details List */}
             <div className="space-y-4 font-mono text-xs">
-              
+
               {/* Email */}
               <div className="terminal-card p-4 flex items-center gap-4">
                 <div className="p-3 bg-[#131313] border border-[#1a1a1a] text-[#38bdf8]">
@@ -99,10 +99,10 @@ export default function Contact() {
                   </span>
                   {/* Code comment: Replace email with user's official email address */}
                   <a
-                    href="mailto:moorsahaul.dev@gmail.com"
+                    href="mailto:mursahaulnur17@gmail.com"
                     className="text-sm font-bold text-[#e5e2e1] hover:text-[#38bdf8] transition-colors"
                   >
-                    moorsahaul.dev@gmail.com
+                    mursahaulnur17@gmail.com
                   </a>
                 </div>
               </div>
