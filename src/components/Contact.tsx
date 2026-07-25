@@ -10,12 +10,13 @@ export default function Contact() {
     name: "",
     email: "",
     message: "",
+    company: "", // Honeypot field for anti-spam
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMessage("");
 
@@ -26,24 +27,29 @@ export default function Contact() {
 
     setIsSubmitting(true);
 
-    /*
-     * NOTE FOR DEVELOPER / USER:
-     * To connect this form to an email delivery service (e.g. Resend, Formspree, SendGrid, or Next.js API Route),
-     * place your fetch/API call here:
-     *
-     * await fetch('/api/contact', {
-     *   method: 'POST',
-     *   headers: { 'Content-Type': 'application/json' },
-     *   body: JSON.stringify(formState)
-     * });
-     */
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formState),
+      });
 
-    // Simulated network latency
-    setTimeout(() => {
-      setIsSubmitting(false);
+      const data = await res.json();
+
+      if (!res.ok) {
+        setErrorMessage(data.error || "ERROR: Failed to deliver message payload.");
+        setIsSubmitting(false);
+        return;
+      }
+
       setSubmitted(true);
-      setFormState({ name: "", email: "", message: "" });
-    }, 800);
+      setFormState({ name: "", email: "", message: "", company: "" });
+    } catch (err) {
+      console.error("Submission error:", err);
+      setErrorMessage("ERROR: Network transmission failed. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -224,6 +230,20 @@ export default function Contact() {
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
+                    {/* Honeypot field (hidden off-screen for anti-spam) */}
+                    <input
+                      type="text"
+                      name="company"
+                      value={formState.company}
+                      onChange={(e) =>
+                        setFormState({ ...formState, company: e.target.value })
+                      }
+                      tabIndex={-1}
+                      autoComplete="off"
+                      className="absolute -left-[9999px] opacity-0 pointer-events-none"
+                      aria-hidden="true"
+                    />
+
                     {errorMessage && (
                       <div className="p-3 bg-[#131313] border border-red-500/50 text-red-400 font-mono text-xs">
                         {errorMessage}
