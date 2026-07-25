@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ExternalLink, FolderGit2, Pill, CalendarCheck, ShieldCheck, CreditCard, LayoutDashboard, Layers } from "lucide-react";
+import { GithubIcon } from "./Icons";
 
 const PROJECTS = [
   {
@@ -25,10 +26,8 @@ const PROJECTS = [
       "MongoDB",
       "Better Auth",
     ],
-    // NOTE FOR USER: Replace placeholder '#' with your live demo deployment URL
-    demoUrl: "#",
-    // NOTE FOR USER: Replace placeholder '#' with your GitHub repository URL
-    githubUrl: "#",
+    demoUrl: "https://med-track-sage.vercel.app/",
+    githubUrl: "https://github.com/a1mb0t38/Med-Track",
     icon: Pill,
     filename: "medtrack_app.tsx",
   },
@@ -46,7 +45,7 @@ const PROJECTS = [
     ],
     tags: [
       "Next.js",
-      "TypeScript",
+      "JavaScript",
       "Tailwind",
       "DaisyUI",
       "Express.js",
@@ -54,10 +53,8 @@ const PROJECTS = [
       "Better Auth",
       "Stripe",
     ],
-    // NOTE FOR USER: Replace placeholder '#' with your live demo deployment URL
-    demoUrl: "#",
-    // NOTE FOR USER: Replace placeholder '#' with your GitHub repository URL
-    githubUrl: "#",
+    demoUrl: "https://medicare-connect-weld.vercel.app",
+    githubUrl: "https://github.com/a1mb0t38/medicare-connect",
     icon: CalendarCheck,
     filename: "medicare_booking.tsx",
   },
@@ -67,7 +64,7 @@ export default function Projects() {
   return (
     <section id="projects" className="py-24 bg-[#000000] border-b border-[#1a1a1a]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="mb-12">
           <div className="flex items-center gap-3">
@@ -110,7 +107,7 @@ export default function Projects() {
 
                 {/* Card Content Grid */}
                 <div className="p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
-                  
+
                   {/* Left Column: Project Overview */}
                   <div className="lg:col-span-7 space-y-5">
                     <div className="flex items-center gap-3">
@@ -152,7 +149,7 @@ export default function Projects() {
 
                   {/* Right Column: Tech Badges & CTAs */}
                   <div className="lg:col-span-5 flex flex-col justify-between space-y-6 bg-[#0a0a0a] lg:border-l border-[#1a1a1a] lg:pl-8 pt-4 lg:pt-0">
-                    
+
                     {/* Tech Badges */}
                     <div className="space-y-3">
                       <div className="font-mono text-xs text-[#8a8f8d] uppercase tracking-wider">
@@ -186,7 +183,6 @@ export default function Projects() {
                       </a>
 
                       {/* GITHUB Button */}
-                      {/* Code Comment: Replace project.githubUrl with your actual GitHub repo link */}
                       <a
                         href={project.githubUrl}
                         target={project.githubUrl === "#" ? "_self" : "_blank"}
@@ -194,7 +190,7 @@ export default function Projects() {
                         className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#131313] border border-[#1a1a1a] hover:border-[#38bdf8] text-[#e5e2e1] hover:text-[#38bdf8] font-mono font-semibold text-xs tracking-wider uppercase transition-colors rounded-none focus:outline-none focus:ring-2 focus:ring-[#38bdf8]"
                         aria-label={`View source code of ${project.title} on GitHub`}
                       >
-                        <FolderGit2 className="w-4 h-4" aria-hidden="true" />
+                        <GithubIcon className="w-4 h-4" />
                         <span>GITHUB REPOSITORY</span>
                       </a>
                     </div>
