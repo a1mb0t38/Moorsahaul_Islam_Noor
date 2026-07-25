@@ -1,4 +1,5 @@
 import { Terminal, ArrowUp } from "lucide-react";
+import { GithubIcon, LinkedinIcon } from "./Icons";
 
 export default function Footer() {
   return (
@@ -17,7 +18,7 @@ export default function Footer() {
           </div>
 
           {/* Minimal Quick Links */}
-          <div className="flex flex-wrap justify-center gap-4 text-xs">
+          <div className="flex flex-wrap justify-center items-center gap-4 text-xs">
             <a href="#home" className="hover:text-[#38bdf8] transition-colors">HOME</a>
             <a href="#about" className="hover:text-[#38bdf8] transition-colors">ABOUT</a>
             <a href="#stack" className="hover:text-[#38bdf8] transition-colors">STACK</a>
@@ -26,15 +27,38 @@ export default function Footer() {
             <a href="#contact" className="hover:text-[#38bdf8] transition-colors">CONTACT</a>
           </div>
 
-          {/* Return to Top Link */}
-          <a
-            href="#home"
-            className="flex items-center gap-1 text-[#8a8f8d] hover:text-[#38bdf8] transition-colors"
-            aria-label="Scroll back to top of page"
-          >
-            <span>BACK TO TOP</span>
-            <ArrowUp className="w-3.5 h-3.5" aria-hidden="true" />
-          </a>
+          {/* Social Icons & Return to Top */}
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 border-r border-[#1a1a1a] pr-4">
+              <a
+                href="https://github.com/a1mb0t38"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub Profile"
+                className="p-2 bg-[#131313] border border-[#1a1a1a] hover:border-[#38bdf8] text-[#8a8f8d] hover:text-[#38bdf8] transition-colors"
+              >
+                <GithubIcon className="w-3.5 h-3.5" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/moorsahaul-islam-noor"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn Profile"
+                className="p-2 bg-[#131313] border border-[#1a1a1a] hover:border-[#38bdf8] text-[#8a8f8d] hover:text-[#38bdf8] transition-colors"
+              >
+                <LinkedinIcon className="w-3.5 h-3.5" />
+              </a>
+            </div>
+
+            <a
+              href="#home"
+              className="flex items-center gap-1 text-[#8a8f8d] hover:text-[#38bdf8] transition-colors"
+              aria-label="Scroll back to top of page"
+            >
+              <span>BACK TO TOP</span>
+              <ArrowUp className="w-3.5 h-3.5" aria-hidden="true" />
+            </a>
+          </div>
         </div>
 
         {/* Copyright Notice */}

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Download, FolderGit2, Mail, Terminal, Code2, Database, Cpu, Layers } from "lucide-react";
+import { GithubIcon, LinkedinIcon } from "./Icons";
 
 const TECH_BADGES = [
   "Next.js",
@@ -68,11 +69,33 @@ export default function Hero() {
               </a>
 
               <a
+                href="https://github.com/a1mb0t38"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-3 bg-[#0a0a0a] border border-[#1a1a1a] hover:border-[#38bdf8] text-[#e5e2e1] hover:text-[#38bdf8] font-mono font-semibold text-xs tracking-wider uppercase transition-colors rounded-none focus:outline-none focus:ring-2 focus:ring-[#38bdf8]"
+                aria-label="GitHub Profile"
+              >
+                <GithubIcon className="w-4 h-4" />
+                <span>GITHUB</span>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/moorsahaul-islam-noor"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-3 bg-[#0a0a0a] border border-[#1a1a1a] hover:border-[#38bdf8] text-[#e5e2e1] hover:text-[#38bdf8] font-mono font-semibold text-xs tracking-wider uppercase transition-colors rounded-none focus:outline-none focus:ring-2 focus:ring-[#38bdf8]"
+                aria-label="LinkedIn Profile"
+              >
+                <LinkedinIcon className="w-4 h-4" />
+                <span>LINKEDIN</span>
+              </a>
+
+              <a
                 href="#projects"
                 className="inline-flex items-center gap-2 px-5 py-3 bg-[#0a0a0a] border border-[#1a1a1a] hover:border-[#38bdf8] text-[#38bdf8] font-mono font-semibold text-xs tracking-wider uppercase transition-colors rounded-none focus:outline-none focus:ring-2 focus:ring-[#38bdf8]"
               >
                 <FolderGit2 className="w-4 h-4" aria-hidden="true" />
-                <span>VIEW PROJECTS</span>
+                <span>PROJECTS</span>
               </a>
 
               <a
@@ -80,7 +103,7 @@ export default function Hero() {
                 className="inline-flex items-center gap-2 px-5 py-3 bg-[#0a0a0a] border border-[#1a1a1a] hover:border-[#38bdf8] text-[#e5e2e1] hover:text-[#38bdf8] font-mono font-semibold text-xs tracking-wider uppercase transition-colors rounded-none focus:outline-none focus:ring-2 focus:ring-[#38bdf8]"
               >
                 <Mail className="w-4 h-4" aria-hidden="true" />
-                <span>CONTACT ME</span>
+                <span>CONTACT</span>
               </a>
             </div>
 

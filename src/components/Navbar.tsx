@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Terminal, Menu, X, ArrowUpRight } from "lucide-react";
+import { GithubIcon, LinkedinIcon } from "./Icons";
 
 const NAV_LINKS = [
   { name: "HOME", href: "#home" },
@@ -84,8 +85,26 @@ export default function Navbar() {
           })}
         </div>
 
-        {/* Desktop CTA Button */}
-        <div className="hidden md:block">
+        {/* Desktop CTA & Social Icons */}
+        <div className="hidden md:flex items-center gap-2 lg:gap-3">
+          <a
+            href="https://github.com/a1mb0t38"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub Profile"
+            className="p-2 bg-[#0a0a0a] border border-[#1a1a1a] hover:border-[#38bdf8] text-[#8a8f8d] hover:text-[#38bdf8] transition-colors"
+          >
+            <GithubIcon className="w-4 h-4" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/moorsahaul-islam-noor"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn Profile"
+            className="p-2 bg-[#0a0a0a] border border-[#1a1a1a] hover:border-[#38bdf8] text-[#8a8f8d] hover:text-[#38bdf8] transition-colors"
+          >
+            <LinkedinIcon className="w-4 h-4" />
+          </a>
           <a
             href="#contact"
             className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#38bdf8] hover:bg-[#0ea5e9] text-[#000000] font-mono font-bold text-xs tracking-wider uppercase transition-colors rounded-none focus:outline-none focus:ring-2 focus:ring-[#38bdf8] focus:ring-offset-2 focus:ring-offset-[#000000]"
@@ -133,11 +152,29 @@ export default function Navbar() {
               </a>
             );
           })}
-          <div className="pt-2">
+          <div className="pt-2 flex items-center gap-2">
+            <a
+              href="https://github.com/a1mb0t38"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 bg-[#131313] border border-[#1a1a1a] hover:border-[#38bdf8] text-[#38bdf8] flex items-center justify-center"
+              aria-label="GitHub Profile"
+            >
+              <GithubIcon className="w-4 h-4" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/moorsahaul-islam-noor"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 bg-[#131313] border border-[#1a1a1a] hover:border-[#38bdf8] text-[#38bdf8] flex items-center justify-center"
+              aria-label="LinkedIn Profile"
+            >
+              <LinkedinIcon className="w-4 h-4" />
+            </a>
             <a
               href="#contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full flex items-center justify-center gap-1.5 px-4 py-2.5 bg-[#38bdf8] hover:bg-[#0ea5e9] text-[#000000] font-mono font-bold text-xs tracking-wider uppercase transition-colors rounded-none"
+              className="flex-1 flex items-center justify-center gap-1.5 px-4 py-2.5 bg-[#38bdf8] hover:bg-[#0ea5e9] text-[#000000] font-mono font-bold text-xs tracking-wider uppercase transition-colors rounded-none"
             >
               <span>HIRE ME</span>
               <ArrowUpRight className="w-4 h-4" aria-hidden="true" />

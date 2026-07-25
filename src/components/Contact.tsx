@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send, CheckCircle2, Terminal } from "lucide-react";
+import { GithubIcon, LinkedinIcon } from "./Icons";
 
 export default function Contact() {
   const [formState, setFormState] = useState({
@@ -88,6 +89,46 @@ export default function Contact() {
             {/* Contact Details List */}
             <div className="space-y-4 font-mono text-xs">
 
+              {/* GitHub Profile */}
+              <a
+                href="https://github.com/a1mb0t38"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="terminal-card p-4 flex items-center gap-4 group hover:border-[#38bdf8] transition-colors block"
+              >
+                <div className="p-3 bg-[#131313] border border-[#1a1a1a] text-[#38bdf8] group-hover:border-[#38bdf8] transition-colors">
+                  <GithubIcon className="w-5 h-5" />
+                </div>
+                <div>
+                  <span className="text-[10px] text-[#8a8f8d] uppercase tracking-wider block">
+                    GITHUB PROFILE
+                  </span>
+                  <span className="text-sm font-bold text-[#e5e2e1] group-hover:text-[#38bdf8] transition-colors">
+                    github.com/a1mb0t38
+                  </span>
+                </div>
+              </a>
+
+              {/* LinkedIn Profile */}
+              <a
+                href="https://www.linkedin.com/in/moorsahaul-islam-noor"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="terminal-card p-4 flex items-center gap-4 group hover:border-[#38bdf8] transition-colors block"
+              >
+                <div className="p-3 bg-[#131313] border border-[#1a1a1a] text-[#38bdf8] group-hover:border-[#38bdf8] transition-colors">
+                  <LinkedinIcon className="w-5 h-5" />
+                </div>
+                <div>
+                  <span className="text-[10px] text-[#8a8f8d] uppercase tracking-wider block">
+                    LINKEDIN PROFILE
+                  </span>
+                  <span className="text-sm font-bold text-[#e5e2e1] group-hover:text-[#38bdf8] transition-colors">
+                    linkedin.com/in/moorsahaul-islam-noor
+                  </span>
+                </div>
+              </a>
+
               {/* Email */}
               <div className="terminal-card p-4 flex items-center gap-4">
                 <div className="p-3 bg-[#131313] border border-[#1a1a1a] text-[#38bdf8]">
@@ -97,7 +138,6 @@ export default function Contact() {
                   <span className="text-[10px] text-[#8a8f8d] uppercase tracking-wider block">
                     EMAIL ADDRESS
                   </span>
-                  {/* Code comment: Replace email with user's official email address */}
                   <a
                     href="mailto:mursahaulnur17@gmail.com"
                     className="text-sm font-bold text-[#e5e2e1] hover:text-[#38bdf8] transition-colors"
