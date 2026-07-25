@@ -20,7 +20,7 @@
 # production
 /build
 
-README-CONTACT-SETUP.md
+/README-CONTACT-SETUP.md
 
 # misc
 .DS_Store
