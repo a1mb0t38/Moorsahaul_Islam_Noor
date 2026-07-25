@@ -24,7 +24,7 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* Left Column: Headline & Intro */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -40,7 +40,7 @@ export default function Hero() {
 
             {/* Name */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-mono font-extrabold tracking-tight text-[#e5e2e1] uppercase leading-tight">
-              MD. MOORSAHAUL<br />ISLAM NOOR
+              MD. MOORSAHA-UL<br />ISLAM NOOR
             </h1>
 
             {/* Title Line with Blinking Cursor */}
